@@ -19,7 +19,7 @@ más rápidamente c:
 - Los obtuve todos jaja
 - Aprendí que realmente es un código bastante simple y predecible de modificar, quizá fue por lo que escogí
 
-##### - Ahora, la imagen del código funcionando: (Ayuda, no sé por qué no se ve)
+##### - Ahora, la imagen del código funcionando:
 
 ![Caminatas Aleatorias](../../../../assets/CaminatasAleatorias_001.png)
 
