@@ -21,10 +21,10 @@ más rápidamente c:
 
 ##### - Ahora, la imagen del código funcionando: (Ayuda, no sé por qué no se ve)
 
-![Caminatas Aleatorias](.../src/assets/CaminatasAleatorias_001.png)
+![Caminatas Aleatorias](../../../../assets/CaminatasAleatorias_001.png)
 
 ##### - Ahora, el código modificado:
-```javascript
+``` js
 // The Nature of Code
 // Daniel Shiffman
 // http://natureofcode.com
