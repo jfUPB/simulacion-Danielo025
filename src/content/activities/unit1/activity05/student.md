@@ -1,12 +1,15 @@
-Estaba experimentando, pondré el código mientras, después lo explico jeje
+Lo que hice fue ponerme a jugar un poco con el código de explicación de la distribución normal de la actividad #4, y tuve un resultado bastante cómodo a mi parecer, pues se nota como directamente se forma una campana de gauss en la visualización del código, la cual es la siguiente:
+
+![DistribucionNormal](../../../../assets/DistribucionNormal.png)
+
+Me parece que es más que evidente que la distribución normal se refleja de manera directa en la campana que se forma al momento de verse la visualización del código, el cual es el siguiente:
 
 
-
-```javascript
+```js
 function setup() {
   createCanvas(100, 100);
   background(93,125,125);
-  describe('Robé el ejemplo de la actividad #4 y le estuve haciendo modificacionse hasta que funcionó como lo necesitaba.');
+  describe('Robé el ejemplo de la actividad #4 y le estuve haciendo modificaciones hasta que funcionó como lo necesitaba.');
 }
 function draw() {
   // Style the circles.
