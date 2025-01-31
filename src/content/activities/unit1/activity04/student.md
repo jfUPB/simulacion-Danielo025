@@ -14,7 +14,7 @@ este caso, siempre iba a tender a ir hacia la derechaaa.
 
 ##### - Ahora, la imagen del código funcionando: (Ayuda, no sé por qué no se ve)
 
-![Caminatas Aleatorias](src/assets/CaminatasAleatorias_NoUniforme_001.png)
+![Caminatas Aleatorias](../../../../assets/CaminatasAleatorias_NoUniforme_001.png)
 
 ##### - Ahora, el código modificado:
 ```javascript
