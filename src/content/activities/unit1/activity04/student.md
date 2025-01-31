@@ -12,7 +12,7 @@ otra posibilidad de que fuera hacia la derecha, haciendo que de esta manera, por
 este caso, siempre iba a tender a ir hacia la derechaaa.
 
 
-##### - Ahora, la imagen del código funcionando: (Ayuda, no sé por qué no se ve)
+##### - Ahora, la imagen del código funcionando:
 
 ![Caminatas Aleatorias](../../../../assets/CaminatasAleatorias_NoUniforme_001.png)
 
