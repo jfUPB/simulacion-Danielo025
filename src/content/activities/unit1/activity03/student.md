@@ -25,9 +25,6 @@ más rápidamente c:
 
 ##### - Ahora, el código modificado:
 ``` js
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
 
 let walker;
 
