@@ -2,7 +2,9 @@
 
 Hice un cambio en el concepto, ahora el ruido perlin no irá en dirección de las teclas 'WASD' sino que al presionar la tecla 'g', este se moverá libremente durante un par de segundos, el vuelo de levy sigue siendo igual, al presionar la 'f' se mueve aleatoriamente a una parte de la pantalla.
 
-De momento este es mi código, está en desarrollo, hasta ahora tiene el random walk y la tendencia hacia donde indiquen las 'WASD', ya logré implementar el vuelo de lévy, falta implementar el ruido perlink
+Ahora todo quedó listo, se mueve con las teclas 'WASD', si presiono la tecla 'F' hace un vuelo de lévy y si presiono la tecla 'G' se mueve libremente con un ruido de Perlin durante 3 segundos.
+
+![Aplicación Interactiva](https://github.com/user-attachments/assets/daf03dd9-9400-42f8-86c3-6650c8f52e31)
 
 
 ```js
@@ -13,6 +15,13 @@ let levyStepSize; // Tamaño del paso en el vuelo de Lévy
 let isLevy = false; // Indicador de si está en modo vuelo de Lévy
 let levySteps = 0; // Contador de los pasos del vuelo de Lévy
 let maxLevySteps = 4; // Número máximo de pasos para el vuelo de Lévy
+
+// Variables para Perlin Noise
+let tx = 0; // Tiempo para Perlin Noise en X
+let ty = 10000; // Tiempo para Perlin Noise en Y (desfase para evitar valores iguales)
+let isPerlinMoving = false; // Indicador de si está en modo Perlin Noise
+let perlinStartTime; // Tiempo de inicio para el movimiento Perlin
+let perlinDuration = 3000; // Duración del movimiento Perlin en milisegundos
 
 function setup() {
   createCanvas(640, 640);
@@ -40,6 +49,8 @@ function draw() {
 
   if (isLevy) {
     levyMove(); // Si está en modo Lévy, mueve con Lévy
+  } else if (isPerlinMoving) {
+    perlinMove(); // Si está en modo Perlin Noise, mueve con Perlin
   } else {
     // Movimiento de la bola según la tecla presionada
     if (keyIsDown(65)) { // Tecla 'A' para izquierda
@@ -72,6 +83,14 @@ function keyPressed() {
       isLevy = true; // Activa el vuelo de Lévy
       levyStepSize = levy(); // Establece el tamaño de paso para el vuelo de Lévy
       levySteps = 0; // Reinicia el contador de pasos de Lévy
+    }
+  }
+
+  // Activar el movimiento Perlin al presionar la tecla 'G'
+  if (key === 'g' || key === 'G') {
+    if (!isPerlinMoving) {
+      isPerlinMoving = true; // Activa el movimiento con Perlin Noise
+      perlinStartTime = millis(); // Guarda el tiempo actual
     }
   }
 }
@@ -108,4 +127,21 @@ function levy() {
 
   return pow(abs(num), 2) * 20 * random([1, -1]); // Retornamos un valor de paso de Lévy
 }
+
+// Función para mover la bola con Perlin Noise
+function perlinMove() {
+  // Comprobamos si han pasado 3 segundos desde que comenzamos el movimiento
+  if (millis() - perlinStartTime < perlinDuration) {
+    // Movimiento con Perlin Noise
+    x = map(noise(tx), 0, 1, 0, width);
+    y = map(noise(ty), 0, 1, 0, height);
+
+    tx += 0.01; // Pequeño incremento para transición suave
+    ty += 0.01;
+  } else {
+    // Después de 3 segundos, detenemos el movimiento Perlin
+    isPerlinMoving = false;
+  }
+}
+
 ```
