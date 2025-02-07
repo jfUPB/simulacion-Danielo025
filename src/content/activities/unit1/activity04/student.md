@@ -18,10 +18,6 @@ este caso, siempre iba a tender a ir hacia la derechaaa.
 
 ##### - Ahora, el código modificado:
 ```javascript
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
 let walker;
 
 function setup() {
