@@ -16,7 +16,7 @@ más sobre como funciona los objetos en javascript y es que estos son más compl
 
 - Ahora sí, el código final modificado con lo que me esperaba encontrar en él y la explicación en comentario del paso por referencia 
 
-```
+``` Js
 let position;
 
 function setup() {
