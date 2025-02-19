@@ -9,7 +9,7 @@ magSq() devuelve el cuadrado de la magnitud sin calcular la raíz cuadrada lo cu
 
 - ¿Versión estática de dot(), versión de instancia de dot()? | La versión de instancia se usa cuando ya tienes un vector y quieres calcular el producto punto con otro, como por ejemplo:
 
-``` Js
+```js
 let v1 = createVector(1, 2);
 let v2 = createVector(3, 4);
 console.log(v1.dot(v2)); // Devuelve 11 (1*3 + 2*4)
