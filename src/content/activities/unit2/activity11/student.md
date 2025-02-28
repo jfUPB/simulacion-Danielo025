@@ -8,34 +8,33 @@ class Mover {
     this.position = createVector(random(width), random(height));
     this.velocity = createVector(0, 0);
     this.acceleration = createVector(0, 0);
-    this.trail = []; // Historial de posiciones para el trazado
+    this.trail = []; // Almacena todas las posiciones anteriores
   }
 
   update() {
-    this.acceleration = createVector(random(-0.25, 0.25), random(-0.25, 0.25)); // Aceleración aleatoria
+    this.acceleration = createVector(random(-0.1, 0.1), random(-0.1, 0.1));
     this.velocity.add(this.acceleration);
+    
+    // Limitar la velocidad máxima
+    this.velocity.limit(2);
+    
     this.position.add(this.velocity);
     
-    // Guardar posición en el historial
-    this.trail.push(this.position.copy());
-    if (this.trail.length > 50) { // Limita el tamaño del rastro
-      this.trail.shift();
-    }
+    // Agregar la posición actual al rastro (ahora sin límite)
+    this.trail.push(createVector(this.position.x, this.position.y));
   }
 
   show() {
-    // Dibujar el rastro
-    noFill();
-    stroke(255, 165, 0, 150); // Color naranja semi-transparente
+    stroke(255, 165, 0, 150);
     strokeWeight(2);
+    noFill();
     beginShape();
-    for (let pos of this.trail) {
-      vertex(pos.x, pos.y);
+    for (let p of this.trail) {
+      vertex(p.x, p.y);
     }
     endShape();
     
-    // Dibujar el círculo
-    fill(95, 200, 200);
+    fill(95,200,200);
     stroke(0);
     strokeWeight(3);
     circle(this.position.x, this.position.y, 25);
@@ -50,7 +49,6 @@ class Mover {
 
   teleport(x, y) {
     this.position.set(x, y);
-    this.trail = []; // Limpiar rastro al teletransportarse
   }
 }
 
