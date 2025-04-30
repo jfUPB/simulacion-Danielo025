@@ -39,7 +39,7 @@ Boceto de concepto inicial:
 
   Y el código utilizado:
 
-  ```js
+```js
   class Emitter {
   constructor(pos, volume) {
     this.pos = pos.copy();
@@ -237,5 +237,5 @@ background(r, g, b);
     if (emitters[i].isDead()) emitters.splice(i, 1);
   }
 }
-  ```
+```
 
