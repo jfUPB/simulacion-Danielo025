@@ -22,4 +22,30 @@
 
   ---
 
+#### *Documentación de proceso*
+
+- Algoritmo elegido
+  
+  Para esta pieza decidí combinar los dos algoritmos estudiados: Flow Fields y Flocking. Me interesa cómo ambos pueden representar aspectos distintos pero complementarios del comportamiento social: uno como
+  estructura invisible que guía, y otro como la respuesta colectiva que emerge de los individuos.
+
+- Concepto de aplicación inesperada
+
+  Mi propuesta representa el comportamiento de la sociedad humana desde una perspectiva simbólica. En lugar de simular fluidos o criaturas, uso los algoritmos para explorar cómo las personas buscan pertenecer a
+  grupos, influenciadas por contextos sociales invisibles. El flujo representa fuerzas externas como educación, familia o cultura. El flocking representa la forma en que nos alineamos con otros, en búsqueda de identidad y conexión.
+
+- Adaptación de la lógica del algoritmo
+
+  Los campos de flujo guían los movimientos de todos los agentes en la escena, simulando esa estructura social que muchas veces no vemos, pero que nos empuja a movernos en ciertas direcciones. Al mismo
+  tiempo, los agentes siguen un comportamiento de enjambre (flocking), buscando alinearse con otros cercanos. Cuando un agente entra en una zona de color, su comportamiento cambia: adquiere un nuevo
+  color (representando una identidad) y se alinea con agentes del mismo color, reforzando esa identidad grupal.
+
+- Interacción implementada
+
+  El usuario controla un agente individual con las flechas del teclado. Este agente puede desplazarse libremente por los campos de flujo, pero al entrar en las "zonas de identidad" , adopta un nuevo comportamiento e
+  identidad visual. A partir de ahí, se comporta como parte del grupo con el que se alineó. La pieza permite explorar activamente cómo tomamos decisiones y cómo estas decisiones nos convierten en parte de una estructura mayor.
+
+
+
+
   
